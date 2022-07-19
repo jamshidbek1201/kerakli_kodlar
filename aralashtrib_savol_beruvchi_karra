@@ -1,0 +1,20 @@
+from random import shuffle
+nini = list(range(1,11))
+ani = list(range(0,11))
+x = 0
+b = 0
+while True:
+    shuffle(nini)
+    shuffle(ani)
+    for n in nini:
+        for a in ani:
+            print("\nTo'g'ri javob: ",a*n)
+            ans = input(f"{a}x{n}=")
+            if int(ans)==a*n:
+                x += 1
+                print(f"{x}ta Javobiz to'g'ri!")
+                print(f"{b}ta Javobiz xato!")
+            elif int(ans)!=a*n:
+                b += 1
+                print(f"{x}ta Javobiz to'g'ri!")
+                print(f"{b}ta Javobiz xato!")
