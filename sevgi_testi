@@ -1,0 +1,14 @@
+import random as r
+n=1
+k = list(range(1,100))
+r.shuffle(k)
+while True:
+    
+    for x in k:
+        a = input("o'zingizni ismingizni kiriting:")
+        b = input("keyingi ismni kiriting:")
+        c = a+b
+        if len(c) == 23:
+            print(100,"%")
+        else:
+            print(x,"%")
