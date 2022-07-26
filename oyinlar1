@@ -1,0 +1,45 @@
+import random as r
+def oyin1():
+    while True:
+        sana1 = 0
+        sana2 = 0
+        son1 = r.randint(1,11)
+        son2 = r.randint(0,11)
+        savol1 = input(f"{son1}x{son2}= ")
+        if savol1==str(son1*son2):
+            sana1+=1
+            print(sana1,"ta javobiz to'g'ri")
+        else:
+            sana2+=1
+            print(sana2,"ta javobiz xato")
+        savol2=input("Yana o'yinni davom ettirasizmi(ha/yo'q)?: ")
+        if savol2=="yoq" or savol2=="yo'q":
+            break
+def oyin2():
+    while True:
+        son3 = r.randint(0,100)
+        ism1 = input("Ismingizni kriting: ")
+        ism2 = input("Sevganizni ismini kriting: ")
+        if (ism1.lower()=="jamshid" and ism2.lower()=="komila") or (ism1.lower()=="komila" and ism2.lower()=="jamshid"):
+            print("Sevgi testining natijasi:\n100%")
+        else:
+            print(f"Sevgi testining natijasi:\n{son3}%")
+        savol3=input("Yana o'yinni davom ettirasizmi(ha/yo'q)?: ")
+        if savol3 == "yoq" or "yo'q":
+            break
+        
+print("Assalomu alaykum. 1-birinchi o'yin mantiqiy hisob. 2-ikkinchi o'yin sevgi testi. O'yin tanlang: ")
+while True:
+    savol4=input(" ")
+    if savol4=='0':
+        break
+    elif savol4=='1':
+        print("Xush kelibsiz mantiqiy hisob o'ynimizga!")
+        oyin1()
+        print("O'yinni tanlang!:")
+    elif savol4=='2':
+        print("Xush kelibsiz sevgi testimizga!")
+        oyin2()
+        print("O'yinni tanlang!:")
+    else:
+        print("Xato belgilandi! Malumot o'rnida 1-o'yinga o'tish uchun 1 ni, 2-o'yinga o'tish uchun 2 ni yuboring! Dasturni to'xtatish uchun 0 ni yuboring!")
