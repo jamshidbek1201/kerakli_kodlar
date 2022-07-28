@@ -27,19 +27,20 @@ def oyin2():
         savol3=input("Yana o'yinni davom ettirasizmi(ha/yo'q)?: ")
         if savol3 == "yoq" or "yo'q":
             break
-        
-print("Assalomu alaykum. 1-birinchi o'yin mantiqiy hisob. 2-ikkinchi o'yin sevgi testi. O'yin tanlang: ")
-while True:
-    savol4=input(" ")
-    if savol4=='0':
-        break
-    elif savol4=='1':
-        print("Xush kelibsiz mantiqiy hisob o'ynimizga!")
-        oyin1()
-        print("O'yinni tanlang!:")
-    elif savol4=='2':
-        print("Xush kelibsiz sevgi testimizga!")
-        oyin2()
-        print("O'yinni tanlang!:")
-    else:
-        print("Xato belgilandi! Malumot o'rnida 1-o'yinga o'tish uchun 1 ni, 2-o'yinga o'tish uchun 2 ni yuboring! Dasturni to'xtatish uchun 0 ni yuboring!")
+def boshlash():
+    ism = input("Ismingizni kriting: ")
+    print(f"Assalomu alaykum {ism.capitalize()}. 1-birinchi o'yin mantiqiy hisob. 2-ikkinchi o'yin sevgi testi. O'yin tanlang: ")
+    while True:
+        savol4=input(" ")
+        if savol4=='0':
+            break
+        elif savol4=='1':
+            print("Xush kelibsiz mantiqiy hisob o'ynimizga!")
+            oyin1()
+            print("O'yinni tanlang!:")
+        elif savol4=='2':
+            print("Xush kelibsiz sevgi testimizga!")
+            oyin2()
+            print("O'yinni tanlang!:")
+        else:
+            print("Xato belgilandi! Malumot o'rnida 1-o'yinga o'tish uchun 1 ni, 2-o'yinga o'tish uchun 2 ni yuboring! Dasturni to'xtatish uchun 0 ni yuboring!")
