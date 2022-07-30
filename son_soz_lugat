@@ -1,0 +1,37 @@
+def son_harf():
+  birlik = {
+            1:"bir",
+           2:"ikki",
+           3:"uch",
+           4:"to'rt",
+           5:"besh",
+           6:"olti",
+           7:"yetti",
+           8:"sakkiz",
+           9:"to'qqiz"}
+  onlik = {10:"o'n",
+          20:"yigirma",
+          30:"o'ttiz",
+          40:"qirq",
+          50:"ellik",
+          60:"oltmish",
+          70:"yetmish",
+          80:"sakson",
+          90:"to'qson"}
+  son = int(input("Son kriting: "))
+  birlik_son = son%10
+  onlik_son = son%100-son%10
+  yuzlik_son = son%1000//100
+  if yuzlik_son in birlik.keys():
+    print(birlik[yuzlik_son],"yuzi",end=" ")
+  if onlik_son in onlik.keys():
+    print(f"{onlik[onlik_son]}",end = ' ')
+  if birlik_son in birlik.keys():
+    print(f"{birlik[birlik_son]}")
+  
+print("Assalomu alaykum!")
+while True:
+  son_harf()
+  yana = input("Yana son kritasizmi(ha/yoq)?: ")
+  if yana == "yo'q" or yana == "yoq":
+    break
